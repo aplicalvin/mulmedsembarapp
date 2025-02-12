@@ -7,14 +7,31 @@
             Mulmed Sembar Apps - Schedule, Information, and Worship Time
         </title>
         <link
+            rel="shortcut icon"
+            href="assets/logoSemBar.png"
+            type="image/x-icon"
+        />
+        <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+
+        <link rel="stylesheet" href="./css/general.css" />
     </head>
     <body>
-        <h1>Hello, world!</h1>
+        <!-- Navbar -->
+        <?php include('components/navbar.php'); ?>
+        <!-- Navbar -->
+
+        <div class="container my-4"></div>
+
+        <!-- WELCOMING POPUP -->
+        <?php include('./components/welcoming-popup.php') ?>
+        <!-- WELCOMING POPUP -->
+
+        <!-- script -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
