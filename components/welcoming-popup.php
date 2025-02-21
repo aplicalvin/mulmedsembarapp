@@ -34,15 +34,15 @@
           Semarang.
         </p>
         <br />
+        <div class="text-end">
+          <p class="m-0 p-0">Koordinator Multimedia</p>
+          <p class="m-0 p-0">HKBP Semarang Barat Ressort Semarang</p>
+          <p class="m-0 p-0">Periode 2024 - 2026</p>
+          <br />
+          <p class="m-0 p-0">Calvin Samuel Simbolon</p>
+        </div>
       </div>
       
-      <div class="text-end">
-        <p class="m-0 p-0">Koordinator Multimedia</p>
-        <p class="m-0 p-0">HKBP Semarang Barat Ressort Semarang</p>
-        <p class="m-0 p-0">Periode 2024 - 2026</p>
-        <br />
-        <p class="m-0 p-0">Calvin Samuel Simbolon</p>
-      </div>
       <!-- Modal Footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
@@ -54,16 +54,17 @@
 
 <!-- SCRIPT -->
 <script>
+  localStorage.clear();
   document.addEventListener("DOMContentLoaded", function () {
-    // Cek apakah popup sudah pernah ditampilkan
-    if (!localStorage.getItem("popupShown")) {
-      // Tampilkan modal popup
+  //   // Cek apakah popup sudah pernah ditampilkan
+  //   if (!localStorage.getItem("popupShown")) {
+  //     // Tampilkan modal popup
       const welcomePopup = new bootstrap.Modal(document.getElementById("welcomePopup"));
       welcomePopup.show();
 
-      // Set status popup sudah ditampilkan
-      localStorage.setItem("popupShown", true);
-    }
+  //     // Set status popup sudah ditampilkan
+  //     localStorage.setItem("popupShown", true);
+  //   }
   });
 </script>
 <!-- SCRIPT -->
