@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info-subtle py-2 px-4" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-secondary-subtle py-2 px-4" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center gap-3" href="/">
             <img

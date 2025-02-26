@@ -1,41 +1,47 @@
-<!DOCTYPE html>
-<html lang="id">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-            Mulmed Sembar Apps - Schedule, Information, and Worship Time
-        </title>
-        <link
-            rel="shortcut icon"
-            href="assets/logoSemBar.png"
-            type="image/x-icon"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
+<?php
+    // Your Folder Route
+    $project_location = '/';
+    $me = $project_location;
 
-        <link rel="stylesheet" href="./css/general.css" />
-    </head>
-    <body>
-        <!-- Navbar -->
-        <?php include('components/navbar.php'); ?>
-        <!-- Navbar -->
+    // GET THE URL PATH
+    $request = $_SERVER['REQUEST_URI'];
 
-        <div class="container my-4"></div>
+    // Normalize the request path: remove trailing slash
+    $request = rtrim($request, '/');
 
-        <!-- WELCOMING POPUP -->
-        <?php include('./components/welcoming-popup.php') ?>
-        <!-- WELCOMING POPUP -->
+    switch($request) {
+        case '/':
+        case '':
+            require 'views/home.php';
+            break;
+        case '/jadwal':
+            require 'views/jadwal.php';
+            break;
+        case '/member':
+            require 'views/member.php';
+            break;
+        case '/info':
+            require 'views/informasi.php';
+            break;
+        case '/detail/20250223001':
+            require 'views/detail_jadwal.php';
+            break;
 
-        <!-- script -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-</html>
+        // AUTH
+        case '/login':
+            require 'views/auth/login.php';
+            break;
+
+        // ADMIN PANEL
+        case '/admin' :
+            require 'views/admin/dashboard.php';
+            break; 
+
+        default:
+            http_response_code(404);
+            require 'views/error/404.php';
+            break;
+    }
+
+
+?>
