@@ -35,6 +35,26 @@
         <?php include('components/footer.php') ?>
 
         <!-- script -->
+
+        <script>
+        // Fungsi untuk menyalin teks ke clipboard
+        // Fungsi untuk menyalin teks ke clipboard
+        function copyToClipboard(button) {
+            // Mendapatkan teks dari cell yang berisi tombol
+            var text = button.closest('td').childNodes[0].nodeValue.trim();
+
+            // Membuat elemen input sementara untuk menyalin ke clipboard
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = text;  // Set value input dengan teks yang akan disalin
+            tempInput.select();
+            document.execCommand("copy");  // Menyalin ke clipboard
+            document.body.removeChild(tempInput);  // Menghapus elemen input setelah menyalin
+
+            // Memberi tahu pengguna bahwa teks telah disalin
+            alert("Teks telah disalin");
+        }
+        </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

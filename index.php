@@ -26,6 +26,9 @@
         case '/detail/20250223001':
             require 'views/detail_jadwal.php';
             break;
+        case '/tataibadah':
+            require 'components/detail_worship/tata_ibadah.php';
+            break;
 
         // AUTH
         case '/login':

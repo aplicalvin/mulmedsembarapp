@@ -23,4 +23,4 @@ $content = ob_get_clean();
 // Include the master layout
 include './template/layout.php';
 ?>
-
+    
